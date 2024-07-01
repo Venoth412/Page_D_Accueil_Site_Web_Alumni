@@ -1,0 +1,141 @@
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+    height: 100vh; /* Hauteur égale à 100% de la hauteur de la fenêtre */
+}
+
+.accueil-image {
+    display: block;
+    max-width: 100%; /* Ajuste la largeur de l'image au maximum possible */
+    max-height: 100%; /* Ajuste la hauteur de l'image au maximum possible */
+    width: 800px; /* Assurez-vous que l'image n'est pas plus large que sa largeur native */
+    height: 500px; /* Ajuste la hauteur en proportion */
+    position: absolute; /* Position absolue pour centrer l'image */
+    top: 50%; /* Place le haut de l'image à 50% du conteneur */
+    left: 50%; /* Place la gauche de l'image à 50% du conteneur */
+    transform: translate(-50%, -50%); /* Déplace l'image de moitié de sa propre largeur et hauteur pour la centrer */
+}
+
+.link-profile, .link-directory, .link-offers {
+    position: absolute;
+    color: white; /* Couleur du texte des liens */
+    font-size: 18px; /* Taille du texte des liens */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    background-color: rgba(243, 240, 240, 0.5); /* Fond semi-transparent pour les liens */
+    padding: 10px 20px; /* Rembourrage pour les liens */
+    border-radius: 5px; /* Coins arrondis pour les liens */
+    opacity: 1; /* Affiche les liens en tout temps */
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Transition douce pour l'opacité et la couleur de fond */
+}
+
+.link-profile:hover, .link-directory:hover, .link-offers:hover {
+    background-color: rgba(112, 102, 102, 0.8); /* Change la couleur de fond au survol */
+}
+
+.link-profile:active, .link-directory:active, .link-offers:active {
+    transform: translateY(2px); /* Déplace légèrement vers le bas au clic */
+}
+
+.link-profile {
+    top: 60%; /* Position verticale centrée */
+    left: 20%; /* Position horizontale pour le premier lien */
+}
+
+.link-directory {
+    top: 60%; /* Position verticale centrée */
+    left: 48%; /* Position horizontale pour le deuxième lien */
+}
+
+.link-offers {
+    top: 60%; /* Position verticale centrée */
+    left: 73%; /* Position horizontale pour le troisième lien */
+}
+
+/* CSS pour mes projets */
+#projets {
+    text-align: justify;
+    padding: 20px;
+}
+
+.project-category {
+    margin-bottom: 40px;
+}
+
+.project-category h2 {
+    text-align: justify;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projects a {
+    display: block;
+    width: 250px; /* Ajuste la taille selon tes préférences */
+    height: 250px; /* Ajuste la taille selon tes préférences */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projects a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* C'est le code CSS pour le bouton en Oranges */
+.absolute-button {
+    bottom: 20px; /* Positionne le bouton à 20px du bas de la fenêtre */
+    text-align: center; /* Centre le contenu horizontalement */
+    display: flex;
+    justify-content: center;
+}
+
+.orange-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.orange-button:hover {
+    background-color: darkorange;
+}
+
+/* Styles pour le carrousel */
+.carousel {
+    margin-top: 10px; /* Réduit un peu plus le margin-top */
+    max-width: 600px; /* Limite la largeur maximale du carrousel */
+    margin: 0 auto; /* Centre le carrousel horizontalement */
+    overflow: hidden; /* Assure que les coins arrondis sont visibles */
+    border-radius: 15px; /* Ajoute un arrondi aux coins du carrousel */
+}
+
+.carousel-item img {
+    max-height: 300px; /* Réduit la hauteur maximale des images */
+    object-fit: cover;
+    border-radius: 15px; /* Assure que les coins des images sont également arrondis */
+}
+
+/* Styles pour les flèches du carrousel */
+.carousel-control-prev, .carousel-control-next {
+    font-size: 6rem; /* Agrandit la taille des flèches */
+    color: black !important; /* Change la couleur des flèches en noir */
+}
